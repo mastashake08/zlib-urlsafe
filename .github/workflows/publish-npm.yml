@@ -1,0 +1,33 @@
+name: Publish to npm
+
+on:
+  # Trigger workflow on pushing a tag that looks like v1.0.0, v2.3.4, etc.
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16  # Or 18, 19, etc.
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      # (Optional) Run your build or tests here
+      # - name: Build
+      #   run: npm run build
+
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
