@@ -1,6 +1,6 @@
 {
-  "name": "zlib-urlsafe",
-  "version": "1.0.2",
+  "name": "@mastashake08/zlib-urlsafe",
+  "version": "1.0.3",
   "description": "Zlib compress/decompress with URL-safe Base64, using native browser streams (no external libraries).",
   "type": "module",
   "main": "index.js",
@@ -20,6 +20,6 @@
     "browser",
     "esm"
   ],
-  "author": "Your Name",
+  "author": "Jyrone Parker",
   "license": "MIT"
 }
