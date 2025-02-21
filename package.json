@@ -1,6 +1,6 @@
 {
   "name": "zlib-urlsafe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zlib compress/decompress with URL-safe Base64, using native browser streams (no external libraries).",
   "type": "module",
   "main": "index.js",
